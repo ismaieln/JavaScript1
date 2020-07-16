@@ -1,7 +1,7 @@
 // (1) Declear the variable.
 let numberX;
 
-// (2) log the type.
+// (2) log the typeof.
 console.log(typeof numberX);
 // expected output:undefined
 
