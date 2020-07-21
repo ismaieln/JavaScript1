@@ -12,6 +12,6 @@ howToMakeOmelette.ingredients = [
 // for (let i = 0; i > 3; i++) {
 //   console.log(howToMakeOmelette[i]);
 // }
-for (const [key, value] of Object.entries(howToMakeOmelette)) {
-  console.log(`${key}: ${value}`);
+for (const [proName, proContenent] of Object.entries(howToMakeOmelette)) {
+  console.log(`${proName}: ${proContenent}`);
 }
