@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Grade Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <!--Header-->
+      <header>
+        <h1>know Your Grade</h1>
+      </header>
+      <!--main-->
+      <main>
+        <!--Input part-->
+        <div class="input">
+          <div class="entry-1">
+            <input
+              id="markInput"
+              class="bRedius textC"
+              type="number"
+              placeholder="Enter your mark..."
+            />
+          </div>
+          <div class="entry-2">
+            <input
+              id="fullMarkInput"
+              class="bRedius textC"
+              type="number"
+              placeholder="Enter full mark..."
+            />
+          </div>
+
+          <div class="entry-3">
+            <input
+              id="calculate"
+              class="bRedius"
+              type="button"
+              value="calculate"
+              onclick="submit();"
+            />
+          </div>
+          <h2 class="entry-4">
+            of
+          </h2>
+        </div>
+
+        <!--Output part-->
+        <div class="output">
+          <div class="outg textC">
+            <h3>Your average grade is:</h3>
+            <h4 id="percentageOutput"></h4>
+          </div>
+          <div class="outg textC">
+            <h3>Your Grade is :</h3>
+            <h1 id="gradeOutput"></h1>
+          </div>
+        </div>
+      </main>
+
+      <!--side bar-->
+      <aside></aside>
+
+      <!--footer-->
+      <footer></footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
