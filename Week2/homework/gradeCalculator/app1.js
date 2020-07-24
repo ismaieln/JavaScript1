@@ -19,7 +19,6 @@ function calcGrade(m, f) {
   } else if (percentage >= 0 && percentage <= 49) {
     grade = "F";
   }
-
   console.log("Yuo got a " + grade + " (" + percentage + "%)!");
 }
 
