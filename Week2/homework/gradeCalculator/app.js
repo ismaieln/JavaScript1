@@ -14,19 +14,19 @@ function calcGrade(m, f) {
   if (percentage >= 90 && percentage <= 100) {
     grade = "A";
     gr.className = "green";
-  } else if (percentage >= 80 && percentage <= 89) {
+  } else if (percentage >= 80 && percentage < 90) {
     grade = "B";
     gr.className = "teal";
-  } else if (percentage >= 70 && percentage <= 79) {
+  } else if (percentage >= 70 && percentage < 80) {
     grade = "C";
     gr.className = "blue";
-  } else if (percentage >= 60 && percentage <= 69) {
+  } else if (percentage >= 60 && percentage < 70) {
     grade = "D";
     gr.className = "yellow";
-  } else if (percentage >= 50 && percentage <= 59) {
+  } else if (percentage >= 50 && percentage < 60) {
     grade = "E";
     gr.className = "orange";
-  } else if (percentage >= 0 && percentage <= 49) {
+  } else if (percentage >= 0 && percentage < 50) {
     grade = "F";
     gr.className = "red";
   } else {
