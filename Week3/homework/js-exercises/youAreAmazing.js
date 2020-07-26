@@ -25,7 +25,7 @@ function giveCompliment(aName) {
 // this is a function to help get a random number(0 to 9)
 function getTheNumber(som) {
   let ran = Math.random();
-  som = Math.round(ran * 10);
+  som = Math.floor(ran * 10);
   // som is a number between 0 and 9
   return som;
 }
