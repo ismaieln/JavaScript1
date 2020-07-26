@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Orbitron:wght@400;500;700&display=swap");
+
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+
+  /* background-image: url("https://www.paisabazaar.com/wp-content/uploads/2017/11/credit-cards.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%; */
+}
+.containAll {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container {
+  max-width: 80%;
+  margin: auto;
+  background-color: beige;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.padd {
+  padding: 20px;
+}
+
+#digitInput {
+  border: 0.5px solid rgb(201, 199, 199);
+  border-radius: 5px;
+  font-family: "Orbitron", sans-serif;
+  font-size: small;
+  padding: 3px;
+  width: 18rem;
+  color: rgb(97, 241, 97);
+  letter-spacing: 0.3rem;
+  margin-bottom: 5vh;
+
+  background-color: rgb(43, 40, 40);
+}
+button {
+  font-family: "Acme", sans-serif;
+}
+::placeholder {
+  font-family: "Acme", sans-serif;
+
+  font-size: 0.8em;
+}
+
+#status {
+  font-family: "Acme", sans-serif;
+  padding-bottom: 8vh;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+}
+img {
+  width: 100%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  z-index: -3;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: rgb(24, 51, 199);
+}
+footer {
+  text-align: center;
+  background-color: rgb(85, 63, 82);
+  color: white;
+
+  visibility: hidden;
+}
+footer > p {
+  padding-top: 5vh;
+}
+
+/* to view on small and medium screens */
+@media (max-width: 1000px) {
+  body {
+  }
+  .container {
+    max-width: 100%;
+    border-radius: 5px 5px 0 0;
+  }
+  img {
+    position: relative;
+    top: unset;
+  }
+  footer {
+    visibility: visible;
+
+    min-height: 30vh;
+    font-size: 2rem;
+  }
+}
