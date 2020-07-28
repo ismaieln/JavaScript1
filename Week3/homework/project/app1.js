@@ -1,3 +1,4 @@
+// to check the length of the input
 function validateTheLength(theNumber) {
   if (theNumber.length == 16) {
     checkAllDigit(theNumber);
@@ -9,6 +10,7 @@ function validateTheLength(theNumber) {
     return false;
   }
 }
+//to check if ther is else than digit
 function checkAllDigit(noDigit) {
   let globalId = /[^0-9]/g;
   let doTest = noDigit.match(globalId);
@@ -24,27 +26,30 @@ function checkAllDigit(noDigit) {
   }
 }
 
+// to check the same digits if
 function isAllSameDigit(str) {
-  let f = 0;
+  let f = false;
   for (let i = 0; i < str.length; i++) {
-    for (let index = 0; index < str.length; index++) {
-      if (str[index] !== str[i]) {
-        f++;
+    for (let index = i + 1; index < str.length; index++) {
+      if (str[i] !== str[index]) {
+        f = true;
+        break;
       }
     }
-    if (f !== 0) {
-      isLastDigitEven(str);
-      return true;
-    } else {
-      console.log(
-        "Invalid! the input " +
-          str +
-          " should contain at least 2 different type of digits!"
-      );
-      return false;
-    }
+  }
+  if (f) {
+    isLastDigitEven(str);
+  } else {
+    console.log(
+      "Invalid! the input " +
+        str +
+        " should contain at least 2 different type of digits!"
+    );
+    return false;
   }
 }
+
+// to check the last digit
 function isLastDigitEven(last) {
   let lastDigit = last.charAt(15);
   if (lastDigit % 2 === 0) {
@@ -58,19 +63,25 @@ function isLastDigitEven(last) {
   }
 }
 
+// to check the summary if greater than 16
 function isTheSumgreaterThanSixteen(summ) {
   let sum = 0;
+  let k = false;
   for (let y = 0; y < summ.length; y++) {
     sum += parseInt(summ[y]);
+    if (sum > 16) {
+      k = true;
+      break;
+    }
   }
-  if (sum > 16) {
+  if (k) {
     console.log(
       "Success! The input " + summ + " is a valid credit card number!"
     );
     return true;
   } else {
     console.log(
-      "Invalid! the summrize of all digit of the input " +
+      "Invalid! the summry of all digit of the input " +
         summ +
         " should be more than 16!"
     );
@@ -78,6 +89,5 @@ function isTheSumgreaterThanSixteen(summ) {
   }
 }
 
-let theNumber = "1111111111100052";
-let testNumber = theNumber.toString();
-validateTheLength(testNumber);
+let theNumber = "8888888888888868";
+validateTheLength(theNumber);
