@@ -6,8 +6,7 @@ function check() {
   // to check the length
   if (theNumber.length == 16) {
     //if the number all digit
-    let doTest = theNumber.match(/[^0-9]/g);
-    if (doTest == null) {
+    if (!isNaN(theNumber)) {
       // if the number has at least two different digit
       let f = false;
       for (let i = 0; i < theNumber.length; i++) {

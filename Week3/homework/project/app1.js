@@ -14,7 +14,6 @@ function validateTheLength(theNumber) {
 function checkAllDigit(noDigit) {
   let globalId = /[^0-9]/g;
   let doTest = noDigit.match(globalId);
-
   if (doTest == null) {
     isAllSameDigit(noDigit);
     return true;
