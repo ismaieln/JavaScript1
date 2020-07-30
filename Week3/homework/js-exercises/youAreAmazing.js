@@ -1,10 +1,11 @@
+// (2) call the function 3 times
 for (let i = 1; i <= 3; i++) {
   let myName = "Ismaiel";
   giveCompliment(myName);
 }
-
+// (1) the function
 function giveCompliment(aName) {
-  let compliments = [
+  const compliments = [
     "great",
     "awesome",
     "smart",
@@ -17,15 +18,13 @@ function giveCompliment(aName) {
     "the best",
   ];
   let i;
-  i = getTheNumber(i);
-  console.log("You are " + compliments[i] + ", " + aName + "!");
+  console.log("You are " + compliments[getTheNumber(i)] + ", " + aName + "!");
   return true;
 }
 
 // this is a function to help get a random number(0 to 9)
 function getTheNumber(som) {
-  let ran = Math.random();
-  som = Math.floor(ran * 10);
+  som = Math.floor(Math.random() * 10);
   // som is a number between 0 and 9
   return som;
 }

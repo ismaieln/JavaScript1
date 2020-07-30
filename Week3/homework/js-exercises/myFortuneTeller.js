@@ -1,13 +1,15 @@
-//declare four arrays
-let numChildren = [3, 2, 0, 3];
-let partnerNames = ["Sofi", "Mary", "Nahed", "Salha"];
-let locations = ["Eygebt", "Spain", "Syria", "Canada"];
-let jobs = ["P.M", "CEO", "president", "Driver"];
+// (1) declare four arrays
+const numChildren = ["4", "2", "0", "3", "10"];
+const partnerNames = ["Sofi", "Mary", "Nahed", "Salha", "Huda"];
+const locations = ["Egypt", "Spain", "Syria", "Canada", "Netherland"];
+const jobs = ["P.M", "CEO", "president", "Driver", "Actor"];
 
-// call the function
-tellFortune(numChildren, partnerNames, locations, jobs);
+// (3) call the function 3 times
+for (let index = 0; index < 3; index++) {
+  console.log(tellFortune(numChildren, partnerNames, locations, jobs));
+}
 
-//the function
+// (2) the function
 function tellFortune(c, p, l, t) {
   // declare initial array
   let person = [];
@@ -28,22 +30,21 @@ function tellFortune(c, p, l, t) {
       default:
     }
   }
-  console.log(
+  return (
     "You will be a " +
-      person[0] +
-      " in " +
-      person[1] +
-      ", married to " +
-      person[2] +
-      " with " +
-      person[3] +
-      " kids."
+    person[0] +
+    " in " +
+    person[1] +
+    ", married to " +
+    person[2] +
+    " with " +
+    person[3] +
+    " kids."
   );
 }
 
-// function to pick random number [0 to 3]
+// function to pick random number [0 to 4]
 function getRandomNumber(som) {
-  let ran = Math.random();
-  som = Math.floor(ran * 4);
+  som = Math.floor(Math.random() * 5);
   return som;
 }
